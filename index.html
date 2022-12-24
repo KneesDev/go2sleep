@@ -61,7 +61,7 @@
     <div class="fade-in-text">
         <p id="site">go2sleep</p>
     </div>
-    <audio id="relaxing" controls muted autoplay>
+    <audio id="relaxing" controls>
         <source src="relax.mp3" type="audio/mpeg">
     </audio>
     <div id="bottom" class="bottom-text">
@@ -89,12 +89,13 @@
         alert("Most browsers block the autoplay function.\nIf you can't hear any audio, please allow audio and video autoplay and refresh the website for the changes to take effect.");
     }
 
-    function toggle() {
-        var rpr = document.getElementById("relaxing");
-        rpr.muted = !rpr.muted;
+    var x = document.getElementById("relaxing");
+
+    function play() {
+        x.play();
     }
 
-    toggle();
+    play();
     autoplaypopup();
     expire();
 </script>
